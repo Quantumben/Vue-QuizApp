@@ -1,6 +1,10 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import router from "./router";
+import LandingPage from "./components/LandingPage.vue";
+import "./assets/main.css";
 
-import './assets/main.css'
+const app = createApp(LandingPage);
 
-createApp(App).mount('#app')
+app.use(router);
+
+app.mount("#app");
